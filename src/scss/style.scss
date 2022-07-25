@@ -1,0 +1,29 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./normalize.scss";
+@import "./header.scss";
+@import "./footer.scss";
+
+
+html {
+    font-size: $font-size;
+}
+
+body {
+    font-family: $main-font;
+    width: 100vw;
+    overflow-x: hidden;
+    span {
+        display: inline-block;
+    }
+    a {
+        text-decoration: none;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    
+}
+main {
+    background: #ffff;
+}

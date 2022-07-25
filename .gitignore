@@ -1,0 +1,9 @@
+/dist
+/.vscode
+/.idea
+.idea
+
+
+/package-lock.json
+/yarn-lock.json
+/docs/
