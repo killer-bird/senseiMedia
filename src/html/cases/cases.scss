@@ -1,0 +1,23 @@
+.cases {
+    padding: 0 8px;
+    &__wrapper {
+        padding: 64px 64px 90px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    @media(max-width: 1250px) {
+        &__wrapper {
+            padding: 25px 0;
+        }
+    }
+    @media(max-width: 1000px) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        &__list {
+            flex-direction: column;
+        }
+    }
+}

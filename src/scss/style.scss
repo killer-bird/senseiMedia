@@ -1,29 +1,195 @@
 @import "./mixins.scss";
 @import "./variables.scss";
 @import "./normalize.scss";
-@import "./header.scss";
-@import "./footer.scss";
 
 
-html {
-    font-size: $font-size;
-}
+
+
+//components
+@import "../html/header/header.scss";
+@import "../html/footer/footer.scss";
+@import "../html/preview/preview.scss";
+@import "../html/achieves/achieves.scss";
+@import "../html/services/services.scss";
+@import "../html/servicesItem/servicesItem.scss";
+@import "../html/consult/consult.scss";
+@import "../html/cases/cases.scss";
+@import "../html/case/case.scss";
+@import "../html/burger/burger.scss";
+
 
 body {
     font-family: $main-font;
+    font-size: $font-size;
     width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
+    color: $font-color;
     span {
         display: inline-block;
     }
     a {
         text-decoration: none;
+        &:active {
+            color: $font-color;
+        }
     }
     *{
         box-sizing: border-box;
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    dl {
+        dd {
+            margin-left: 0;
+        }
+    }
+    h4 {
+        margin: 0;
+    }
+    textarea {
+        resize: none;
+    }
+    .input {
+        padding: 16px 19px;
+        background: #FFFFFF;
+        border: none;
+        box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+        border-radius: 7px;
+        &::placeholder {
+            font-size: $font-size;
+        }
+    }
+    .section__title {
+        font-weight: $bold;
+        font-size: 37px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        margin-top: 0;
+        @media(max-width: 400px) {
+            font-size: 26px;
+        }
+    }
+    
+    @media(max-width: 1250px) {
+        font-size: 14px;
+    }
+    @media(max-width: 455px) {
+        font-size: 12px;
     }
     
 }
+._lock {
+    height: 100vh;
+    overflow: hidden;
+}
 main {
-    background: #ffff;
+    background: $bg;
+}
+span {
+    display: inline-block;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 25px 0 20px;
+    max-width: 1230px;
+    width: 100%;
+    @media(max-width: 1250px) {
+        max-width: 1000px;
+    }
+    @media(max-width: 1064px) {
+
+    }
+}
+.checkbox {
+    position: absolute;
+    
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &__container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        align-items: center;
+        margin-bottom: 26px;
+        cursor: pointer;
+        font-size: $font-size;
+        font-weight: $light;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    &__label {
+        margin-left: 12px;
+        margin-top: 8px;
+    }
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+        border-radius: 2px;
+    }
+}
+
+.checkbox__container input:checked ~ .checkbox__checkmark {
+    background: linear-gradient(115.11deg, #F32C6D 10.12%, #CB1D95 100.01%);;
+}
+
+.checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox__container input:checked ~ .checkbox__checkmark:after {
+    display: block;
+}
+.checkbox__container .checkbox__checkmark:after {
+    left: calc(50% - 3px);
+    top: calc(50% - 7px);
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn {
+    padding: 18px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: $semibold;
+    transition: .3s;
+    &_pink {
+        background: $pink-gradient;
+        border-radius: 9px;
+        &:hover {
+            background: linear-gradient(115.11deg, #f3739e 10.12%, #fa36bc 100.01%);;
+        }
+    }
+    &_blue {
+        background: #77B2D3;
+        border-radius: 250px;
+        &:hover {
+            background: #6cbdec;
+        }
+    }
 }

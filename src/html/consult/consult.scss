@@ -1,0 +1,55 @@
+.consult {
+    display: flex;
+    padding: 0 8px;
+    &__wrapper {
+        padding: 10px;
+    }
+    .consult__title {
+        margin-bottom: 34px;
+    }
+    &__descr {
+        margin-bottom: 25px;
+    }
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__input {
+        // flex: 1 1 270px;
+        &:first-child{
+            margin-right: 17px;
+            
+        }
+        &:first-child, &:nth-child(2) {
+            width: 100%;
+            max-width: 270px;
+            margin-bottom: 28px;
+            // margin-right: 30px;
+        }
+        
+    }
+    textarea.consult__input {
+        flex: 3 1 100%;
+        max-height: 141px;
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        max-width: 195px;
+    }
+
+    @media(max-width: 1000px) {
+        &__right {
+            display: none;
+        }
+        &__form {
+            flex-direction: column;
+        }
+    }
+    @media(max-width: 370px) {
+        textarea.consult__input {
+            max-width: 270px;
+            
+        }
+    }
+}

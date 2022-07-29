@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@@include('html/head.html',{
+@@include('html/head/head.html',{
     "title": "Главная"
 })
 <body>
-    @@include('html/header.html',{})
+    @@include('html/header/header.html',{})
     <main>
+        <section>
+            @@include('html/preview/preview.html',{})
+        </section>
+        <section>
+            @@include('html/achieves/achieves.html',{})
+        </section>
+        <section>
+            @@include('html/services/services.html',{})
+        </section>
+        <section>
+            @@include('html/consult/consult.html',{})
+        </section>
+        <section>
+            @@include('html/cases/cases.html',{})
+        </section>
+        <section>
+
+        </section>
     </main>
-    @@include('html/footer.html',{})
+    @@include('html/footer/footer.html',{})
     <script src="js/app.min.js"></script>
     
 </body>

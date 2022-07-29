@@ -1,0 +1,25 @@
+<div class="services-item">
+    <div class="services-item__card">
+        <div class="services-item__card__header">
+            <h3 class="services-item__card__title">
+                @@title
+            </h3>
+        </div>
+        <div class="services-item__card__main">
+            <ul class="services-item__card__list">
+                @@for( var i =0; i < arr.length; i++) {
+                    <li class="services-item__card__item">
+                        <img src="../../img/svg/check-mark.svg" alt="" class="services-item__card__icon">
+                        `+arr[i]+`
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="services-item__card__footer">
+            от <span class="services-item__card__price">
+                @@price
+            </span>
+        </div>
+    </div>
+    <button class="btn btn_pink services__btn">Подробнее</button>
+</div>

@@ -1,0 +1,28 @@
+.services {
+    padding: 0 8px;
+    &__list {
+        display: flex;
+    }
+    &__wrapper {
+        padding: 84px 0;
+    }
+    &__btn {
+        max-width: 195px;
+        
+    }
+    @media(max-width: 1250px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__list {
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+    }
+    @media(max-width: 1000px){
+        &__wrapper {
+            padding: 32px 0;
+        }
+    }
+}

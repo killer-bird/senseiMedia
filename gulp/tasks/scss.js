@@ -11,7 +11,7 @@ const sass = gulpSass(dartSass)
 export const scss = ()=>{
     return app.gulp.src(app.path.src.scss, { sourceMap: app.isDev})
         .pipe(app.plugins.plumber())
-        .pipe(app.plugins.replace(/\.\.img\//g, '../img/'))
+        .pipe(app.plugins.replace('../../img/', '../img/'))
         .pipe(sass({
             outputStyle: 'expanded'
         }))
